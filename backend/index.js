@@ -6,9 +6,11 @@ const cookieParser = require('cookie-parser');
 
 
 app.use(express.json());
-app.use(cors({origin: 'http://localhost:3001',credentials: true}));
+app.use(cors({origin: 'http://localhost:3001,https://blog-website-client-lovat.vercel.app',credentials: true}));
 app.use(cookieParser());
-
+app.get("/",(req,res)=>{
+    res.send("server is running")
+})
 //Routes
 app.use('/auth',require('./routes/auth'));
 app.use('/post',require('./routes/post'))

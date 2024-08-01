@@ -1,0 +1,109 @@
+  
+  .container {
+    .auth {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: row;
+    }
+  
+    .box {
+      display: flex;
+      flex-direction: row;
+      border-radius: 30px;
+    }
+  
+    .l-side {
+      width: 50%;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+  
+      img {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .r-side1 {
+      width: 50%;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      padding: 2.5rem 3rem;
+  
+      h1 {
+        color: rgb(65, 105, 225); /* Dark blue heading */
+        font-size: 2rem;
+        text-align: center;
+      }
+  
+      form {
+        border-radius: 30px;
+        background-color: white;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+  
+        input {
+          height: 2rem;
+          margin-bottom: 0.8rem;
+          border: 2px solid black;
+          border-radius: 10px;
+          text-align: center;
+        }
+  
+        button {
+          background-color: rgb(71, 215, 255); /* Dark blue button */
+          color: white;
+          border: none;
+          border-radius: 10px;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          margin-top: 1rem;
+        }
+  
+        button:hover {
+          background-color: rgb(51, 153, 255); /* Dark blue hover */
+          
+          box-shadow: rgb(30, 144, 255) 0px 4px 8px 0px;
+        }
+  
+        div {
+          color: rgb(65, 105, 225); /* Dark blue text */
+          margin-top: 0.5rem;
+          text-align: center;
+        }
+  
+        a {
+          color: rgb(65, 105, 225); /* Dark blue link */
+          text-decoration: none;
+          margin-top: 1rem;
+          text-align: center;
+          display: block;
+        }
+  
+        a:hover {
+          color: rgb(0, 0, 205); /* Medium blue hover */
+        }
+      }
+    }
+    @media screen and (max-width: 560px) {
+      .r-side1 {
+        width: 100%;
+        padding: 0px 0px;
+  
+        form {
+          padding: 2rem;
+        }
+      }
+  
+      .l-side {
+        display: none; 
+      }
+    }
+  }
+  

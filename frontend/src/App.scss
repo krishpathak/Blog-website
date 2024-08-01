@@ -1,0 +1,593 @@
+.app {
+  background-color: rgb(196, 220, 227);
+
+  .navbar {
+    background-color: rgb(71, 215, 255);
+
+    .container {
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      .icon,.icon1{
+        display: none;
+      }
+      .login {
+        font-weight: 500;
+        color: rgb(0, 132, 255);
+        font-size: 18px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 60px;
+      }
+
+      .logo {
+        margin-right:10px ;
+        img {
+          width: 50px;
+          height: 50px;
+          margin-left: 10px;
+        }
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin-left: auto;
+        padding: 0;
+
+        li {
+          a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 900;
+            margin-right: 20px;
+            transition: color 0.3s ease-in-out;
+          }
+
+          a:hover {
+            color: rgb(65, 105, 225);
+          }
+        }
+      }
+
+      span {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        margin-right: 20px;
+        cursor: pointer;
+        font-weight: 400;
+
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
+
+      .write {
+        height: 50px;
+        width: 50px;
+        background-color: rgb(235, 246, 249);
+        margin-right: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        border: 2px solid darkblue;
+        color: rgb(0, 0, 0);
+        transition: background-color 0.4s ease-in-out;
+
+
+      }
+
+      .write:hover {
+        background-color: rgb(71, 215, 255);
+      }
+    }
+    @media screen and (max-width:875px) {
+      display: flex;
+      justify-content: space-between;
+        .container .links{
+          display: none;
+        }
+        .container .icon1{
+          display: none;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: 30px;
+        }
+        .container .icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          width: 30px;
+        }
+    }
+    @media screen and (max-width:520px) {
+      .container .loger{
+          display: none;
+        }
+    }
+  }
+
+  .footer {
+    background-color: rgb(71, 215, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+
+    .logo {
+      img {
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    div {
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .home {
+
+    .blogs {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+
+      .post {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &:nth-child(2n+1) {
+          flex-direction: row-reverse;
+        }
+
+        .image {
+          width: 40%;
+
+          img {
+            padding: 0.6rem;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 2px solid rgb(71, 215, 255);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2), 0 20px 50px 0 rgba(0, 0, 0, 0.19);
+          }
+        }
+
+        .r-side {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0px 20px;
+
+          h2 {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+          }
+
+          p {
+            text-align: center;
+          }
+
+          a {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+          }
+
+          button {
+            padding: 10px 20px;
+            background-color: rgb(71, 215, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease-in-out;
+
+            &:hover {
+              background-color: rgb(51, 153, 255);
+            }
+          }
+        }
+
+      }
+    }
+
+    @media screen and (max-width:530px) {
+      .blogs .post {
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+
+        &:nth-child(2n+1) {
+          flex-direction: column;
+        }
+      }
+
+      .blogs .post .image {
+        width: 70%;
+      }
+
+      .blogs .post .r-side {
+        width: 80%;
+      }
+    }
+  }
+
+  .single {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+
+      .content {
+        flex: 5;
+
+        .user-detail {
+          .blogphoto {
+            width: 76%;
+            height: 400px;
+            margin-top: 20px;
+            padding: 0.6rem;
+            object-fit: cover;
+            border: 2px solid rgb(71, 215, 255);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2), 0 20px 50px 0 rgba(0, 0, 0, 0.19);
+          }
+
+        }
+
+        .user {
+          display: flex;
+          flex-direction: row;
+
+          img {
+            height: 50px;
+            width: 50px;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 50%;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+
+            .author {
+              font-size: 15px;
+              font-weight: 500;
+              margin-top: 10px;
+            }
+
+            .posted {
+              font-size: 10px;
+              font-weight: 400;
+              margin-top: 3px;
+            }
+          }
+
+          .edit,
+          .delete {
+            cursor: pointer;
+            color: black;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-left: 15px;
+            height: 25px;
+            width: 25px;
+            border: 3px solid black;
+            border-radius: 50%;
+            padding: 0.3rem;
+          }
+        }
+
+        h1 {
+          font-size: 28px;
+          font-weight: 700;
+          margin-top: 20px;
+          width: 90%;
+          margin-left: 10px;
+        }
+
+        p {
+          font-size: 20px;
+          margin-left: 10px;
+          width: 90%;
+        }
+      }
+
+      .menu {
+        flex: 2;
+        margin-top: 0px;
+
+        h1 {
+          text-align: center;
+          font-size: 25px;
+          font-weight: 800;
+          margin-top: 10px;
+        }
+
+        .post {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            height: 300px;
+            width: 90%;
+            padding: 0.6rem;
+            object-fit: cover;
+            border: 2px solid rgb(71, 215, 255);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2), 0 20px 50px 0 rgba(0, 0, 0, 0.19);
+          }
+
+
+          button {
+            padding: 10px 20px;
+            background-color: rgb(71, 215, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease-in-out;
+
+            &:hover {
+              background-color: rgb(51, 153, 255);
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:480px) {
+      .container {
+        margin-right: 5%;
+        width: 90%;
+        margin-left: 5%;
+
+        .content .user-detail .blogphoto {
+          width: 100%;
+        }
+
+        .menu {
+          flex: 0;
+          display: none;
+        }
+      }
+    }
+  }
+
+  .write {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .content {
+      padding: 0px 30px;
+      flex: 6;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      input {
+        height: 30px;
+        width: 50%;
+        border: 2px solid rgb(71, 215, 255);
+        background-color: rgb(235, 246, 249);
+        margin-bottom: 20px;
+      }
+
+      .editorContainer {
+        overflow-y: hidden;
+      }
+
+      .editor {
+        width: 800px;
+        height: 500px;
+        overflow: unset;
+        resize: both;
+        overflow: auto;
+        border: 2px solid rgb(71, 215, 255);
+      }
+    }
+
+    .menu {
+      flex: 2;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 2rem;
+
+        label {
+          padding: 10px 20px;
+          background-color: rgb(71, 215, 255);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.4s ease-in-out;
+          margin: 10px;
+
+          &:hover {
+            background-color: rgb(51, 153, 255);
+          }
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: rgb(71, 215, 255);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.4s ease-in-out;
+          margin: 10px;
+
+          &:hover {
+            background-color: rgb(51, 153, 255);
+          }
+        }
+
+      }
+
+      .catagory {
+        h1 {
+          text-align: center;
+        }
+
+        .catagoryList {
+          width: 55%;
+          margin-left: 22.5%;
+        }
+
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 2rem;
+        border: 1px solid gray;
+      }
+    }
+
+    
+
+    @media screen and (max-width:1080px) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width:830px) {
+      .editorContainer {
+        width: 100%;
+
+        .editor {
+          width: 500px;
+        }
+      }
+    }
+
+    @media screen and (max-width:560px) {
+      .editorContainer {
+        width: 100%;
+
+        .editor {
+          width: 400px;
+        }
+      }
+    }
+
+    @media screen and (max-width:450px) {
+      .editorContainer {
+        width: 100%;
+
+        .editor {
+          width: 350px;
+        }
+      }
+    }
+
+    @media screen and (max-width:400px) {
+      .editorContainer {
+        width: 100%;
+
+        .editor {
+          width: 300px;
+          height: 200px;
+        }
+      }
+    }
+
+    @media screen and (max-width:340px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .editorContainer {
+        width: 100%;
+
+        .editor {
+          width: 250px;
+          height: 200px;
+        }
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+      }
+    }
+
+  }
+  .upload {
+    padding: 10px 20px;
+    background-color: rgb(71, 215, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+    margin-top: 20px;
+    width: 40x;
+    margin-left: 47%;
+
+    &:hover {
+      background-color: rgb(51, 153, 255);
+    }
+  }
+
+}

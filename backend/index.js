@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 
 
 app.use(express.json());
-app.use(cors({origin: 'https://blog-website-cyan-seven.vercel.app/',credentials: true}));
+app.use(cors({origin: 'https://blog-website-client-lovat.vercel.app',credentials: true}));
 app.use(cookieParser());
 app.get("/",(req,res)=>{
     res.send("server is running")

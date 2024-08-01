@@ -10,7 +10,7 @@ const Edit = ({edit}) => {
     const [catagory, setCatagory] = useState('');
     useEffect(()=>{
         const fetchdata1 = async () => {
-            const response = await fetch(`http://localhost:8000/post/${edit}`, {
+            const response = await fetch(`https://blog-website-cyan-seven.vercel.app/post/${edit}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const Edit = ({edit}) => {
         data.append('image', img);
 
         try {
-            const url = 'http://localhost:8000/auth/upload';
+            const url = 'https://blog-website-cyan-seven.vercel.app/auth/upload';
             const response = await fetch(url, {
                 method: 'POST',
                 body: data
@@ -53,7 +53,7 @@ const Edit = ({edit}) => {
         console.log(imgUrl)
     }
     const handleOnClick=()=>{
-        const url="http://localhost:8000/post/update"
+        const url="https://blog-website-cyan-seven.vercel.app/post/update"
         const EditData=async()=>{
             const response=await fetch(url,{
                 method: 'PUT',

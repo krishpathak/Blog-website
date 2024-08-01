@@ -26,7 +26,7 @@ export const AuthContextProvider = ({ children }) => {
     // };
 
     const logout = async () => {
-        const url = "http://localhost:8000/auth/logout";
+        const url = "https://blog-website-cyan-seven.vercel.app/auth/logout";
             const response = await fetch(url, {
                 method: "POST", 
                 headers: {

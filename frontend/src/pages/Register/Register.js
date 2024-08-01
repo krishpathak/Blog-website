@@ -7,7 +7,7 @@ const Register = () => {
 
   const handleClick=(e)=>{
     e.preventDefault()
-    const url='http://localhost:8000/auth/register'
+    const url='https://blog-website-cyan-seven.vercel.app/auth/register'
     const saveData=async ()=>{
       const res=await fetch(url,{
         method: 'POST',

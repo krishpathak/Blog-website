@@ -17,8 +17,8 @@ const Home = ({ setid }) => {
 
   useEffect(() => {
     const fetchdata = async () => {
-      const url = `http://localhost:8000/post/?cat=${category}`;
-      if (category == null) { const url = `http://localhost:8000/post` }
+      const url = `https://blog-website-cyan-seven.vercel.app/post/?cat=${category}`;
+      if (category == null) { const url = `https://blog-website-cyan-seven.vercel.app/post` }
       // const url=`http://localhost:8000/post`
       const response = await fetch(url, {
         method: 'GET',

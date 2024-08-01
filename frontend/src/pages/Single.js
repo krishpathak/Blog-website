@@ -18,7 +18,7 @@ const Single = ({setedit}) => {
 
     const delete1=()=>{
         const id = location.pathname.slice(8)
-        const url=`http://localhost:8000/post/delete/${id}`
+        const url=`https://blog-website-cyan-seven.vercel.app/post/delete/${id}`
 
         const deleteData=async ()=>{
             const response=await fetch(url,{
@@ -38,7 +38,7 @@ const Single = ({setedit}) => {
     useEffect(() => {
 
         const fetchdata = async () => {
-            const response = await fetch(`http://localhost:8000/post`, {
+            const response = await fetch(`https://blog-website-cyan-seven.vercel.app/post`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Single = ({setedit}) => {
         fetchdata();
         const fetchdata1 = async () => {
             const id = location.pathname.slice(8)
-            const response = await fetch(`http://localhost:8000/post/${id}`, {
+            const response = await fetch(`https://blog-website-cyan-seven.vercel.app/post/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ const Single = ({setedit}) => {
     }, [])
     useEffect(() => {
         const uid = post1.uid
-        const url = `http://localhost:8000/auth/find/${uid}`
+        const url = `https://blog-website-cyan-seven.vercel.app/auth/find/${uid}`
         const findauthor = async () => {
             const response = await fetch(url, {
                 method: 'GET',

@@ -9,22 +9,22 @@ const Write = () => {
     const [title, setTitle] = useState('');
     const [img, setImg] = useState('');
     const [catagory, setCatagory] = useState('');
-    const[imgUrl,setimgurl]=useState('')
-    const uid=localStorage.getItem("uid")
+    const [imgUrl, setimgurl] = useState('')
+    const uid = localStorage.getItem("uid")
 
     const handleclick = async (e) => {
         e.preventDefault();
         const upload = async () => {
             const data = new FormData();
             data.append('image', img);
-    
+
             try {
-                const url = 'http://localhost:8000/auth/upload';
+                const url = 'https://blog-website-cyan-seven.vercel.app/auth/upload';
                 const response = await fetch(url, {
                     method: 'POST',
                     body: data
                 });
-    
+
                 const result = await response.json();
                 setimgurl(result.file);
                 console.log(imgUrl)
@@ -34,31 +34,31 @@ const Write = () => {
         }
         upload();
     }
-    const handleOnClick=async ()=>{
-        const url='http://localhost:8000/post/write'
-        const postData=async()=>{
-            try{
-                const response=await fetch(url,{
-                    method:'POST',
-                    headers:{
-                        'Content-Type':'application/json'
+    const handleOnClick = async () => {
+        const url = 'https://blog-website-cyan-seven.vercel.app/post/write'
+        const postData = async () => {
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
                     },
-                    body:JSON.stringify({
-                        title:title,
-                        description:value,
-                        img:imgUrl,
-                        cat:catagory,
-                        uid:uid,
+                    body: JSON.stringify({
+                        title: title,
+                        description: value,
+                        img: imgUrl,
+                        cat: catagory,
+                        uid: uid,
                     })
                 })
-                const data=await response.json()
+                const data = await response.json()
                 console.log(data)
-            }catch(error){
-                console.error('Error:',error)
+            } catch (error) {
+                console.error('Error:', error)
             }
         }
         postData();
-        window.location.href='/home'
+        window.location.href = '/home'
     }
     return (
         <>
@@ -71,7 +71,7 @@ const Write = () => {
                             <input type='text' placeholder='Title' id='title' onChange={e => setTitle(e.target.value)} />
                         </div>
                         <div className='editorContainer'>
-                            <textarea value={value} onChange={e=>setValue(e.target.value)} className='editor' placeholder='Write your description' />
+                            <textarea value={value} onChange={e => setValue(e.target.value)} className='editor' placeholder='Write your description' />
                         </div>
                     </div>
                     <div className='menu'>

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const New1 = () => {
     const[img,setimg]=useState()
         const upload=()=>{
-        const url="http://localhost:8000/auth/upload";
+        const url="https://blog-website-cyan-seven.vercel.app/auth/upload";
         const uploadfile=async()=>{
             const formData=new FormData();
             formData.append('image',img);

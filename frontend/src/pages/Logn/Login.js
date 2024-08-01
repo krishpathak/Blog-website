@@ -11,7 +11,7 @@ const Login = () => {
     // const {login,isAuthenticated}=useContext(AuthContext);
     const handlesubmit=(e)=>{
         e.preventDefault();
-        const url='http://localhost:8000/auth/login'
+        const url='https://blog-website-cyan-seven.vercel.app/auth/login'
         const getData=async()=>{
         const res=await fetch(url,{
             method:'POST',

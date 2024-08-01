@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use('/auth',require('./routes/auth'));
 app.use('/post',require('./routes/post'))
 
-const port =process.env.PORT
+const port =process.env.PORT||8000
 console.log(process.env.PASSWORD)
 app.listen(8000,()=>{
     console.log(`Server listening on port ${port}`)
